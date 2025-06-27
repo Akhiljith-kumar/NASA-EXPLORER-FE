@@ -17,19 +17,19 @@ const SpaceWeatherAlerts = () => {
   return (
     <div className='space-weather'>
       <div className='flex-row'>
-        <h2>Space Weather Alerts</h2>
+        <p style={{fontSize:'1.9rem'}}>Space Weather <span className='orange'>Alerts</span></p>
         <img className='radar-icon' src="icons/space-satellite-dish-svgrepo-com.svg" alt="" />
       </div>
-      <div>
+      <div className='alter-list-wrapper'>
         {alerts.slice(0, 10).map(alert => {
           const { intensity, peak } = parseFlareData(alert.messageBody);
           return (
-            <div key={alert.messageID} className="card">
-              <h4>{alert.messageType} Alert</h4>
-              <p><strong>Issued:</strong> {new Date(alert.messageIssueTime).toLocaleString()}</p>
-              <p><strong>Intensity:</strong> {intensity}</p>
-              <p><strong>Peak Time:</strong> {peak}</p>
-              <a href={alert.messageURL} target="_blank" rel="noreferrer">🔗 View Alert</a>
+            <div key={alert.messageID} className="weather-alert-card font-popins">
+              <p style={{fontSize:'19px', marginBottom: '10px'}}>{alert.messageType} Alert</p>
+              <p>Issued: {new Date(alert.messageIssueTime).toLocaleString()}</p>
+              <p>Intensity: {intensity}</p>
+              <p style={{marginBottom: '10px'}}>Peak Time: {peak}</p>
+              <a className='view-altert-btn font-cubano' href={alert.messageURL} target="_blank" rel="noreferrer">VIEW ALERT <i class="ri-external-link-line" style={{fontSize:'24px'}}></i></a>
             </div>
           );
         })}

@@ -11,7 +11,7 @@ function App() {
         <Header />
         <div className='flex-row sec-1'>
           <APOD/>
-          {/* <SpaceWeatherAlerts /> */}
+          <SpaceWeatherAlerts />
         </div>
         {/* <MediaExplorer />
         <TechTransferExplorer /> */}

@@ -15,6 +15,25 @@ code {
     monospace;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1f0; 
+  border-radius: 50px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #EC6852; 
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #EC6852; 
+}
+
 .orange {
   color: #EC6852;
 }
@@ -41,6 +60,10 @@ code {
 
 .font-sofia {
   font-family: sofia-pro, sans-serif;
+}
+
+.font-cubano {
+  font-family: cubano, sans-serif;
 }
 
 .gradient-text {
