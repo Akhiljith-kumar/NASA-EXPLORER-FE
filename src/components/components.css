@@ -1,0 +1,124 @@
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-head {
+    font-size: 3rem;
+}
+
+.astronaut-icon {
+    width: 5rem;
+}
+
+.apod-content {
+    margin: 0 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-start;
+    gap: 10px;
+
+}
+
+.astro-des {
+    max-width: 600px;
+}
+
+.astro-img-container {
+    position: relative;
+    width: 450px;
+    height: 350px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: -10px 10px #586F7C;
+}
+
+.astro-img-container img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.astro-container {
+    align-items: flex-start;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+}
+
+.vertical-ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.apod {
+    width: 50%;
+}
+
+.space-weather {
+    width: 50%;
+    padding-left: 30px;
+}
+
+.blue-grey {
+    color: #586F7C;
+}
+
+.blue-grey-bg {
+    background: #586F7C;
+}
+
+.regular-btn {
+    padding: 12px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    background: #586F7C;
+}
+
+.regular-btn:hover {
+    background: #2d3940;
+}
+
+.media-library-wrap {
+    margin-top: 3em;
+}
+
+.radar-icon {
+    width: 50px;
+}
+
+.full-screen-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: zoom-out;
+}
+
+.full-screen-img img {
+    width: auto;
+    height: 90%;
+    box-shadow: #586F7C 0px 0px 0px 5px;
+}

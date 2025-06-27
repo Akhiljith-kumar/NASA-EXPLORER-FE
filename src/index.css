@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #12181B; 
+  font-family: cubano, sans-serif;
+  color: #ffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.orange {
+  color: #EC6852;
+}
+
+.yellow {
+  color: #FED766;
+}
+
+.head-1 {
+  font-size: 3.75rem;
+}
+
+.head-2 {
+  font-size: 1.6rem;
+}
+
+.para {
+  color: #A6B6BE;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.font-sofia {
+  font-family: sofia-pro, sans-serif;
+}
+
+.gradient-text {
+    background-image: linear-gradient(to top, var(--tw-gradient-stops));
+    --tw-gradient-from: #f97316;
+    --tw-gradient-to: rgb(249 115 22 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-gradient-to: #eab308;
+    background-clip: text;
+    color: #0000;
+    -webkit-background-clip: text;
+}
+
+.font-popins {
+  font-family: 'Poppins', sans-serif;
+}
