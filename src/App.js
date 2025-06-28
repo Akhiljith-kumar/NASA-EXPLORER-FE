@@ -13,8 +13,8 @@ function App() {
           <APOD/>
           <SpaceWeatherAlerts />
         </div>
-        {/* <MediaExplorer />
-        <TechTransferExplorer /> */}
+        <MediaExplorer />
+        {/* <TechTransferExplorer /> */}
     </div>
   );
 }
