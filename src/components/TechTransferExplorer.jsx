@@ -6,20 +6,30 @@ const TechTransferExplorer = () => {
   const [techResults, setTechResults] = useState([]);
 
   useEffect(() => {
-    getTechByCategory(techCategory).then(res => setTechResults(res.data)).catch(console.error);
+    getTechByCategory(techCategory)
+      .then(res => setTechResults(res.data))
+      .catch(console.error);
   }, [techCategory]);
 
   return (
     <div>
-      <h2>🛰 TechTransfer Patents</h2>
+      <h2>TechTransfer Patents</h2>
       <select value={techCategory} onChange={e => setTechCategory(e.target.value)}>
         {['space', 'engine', 'medical', 'safety', 'material'].map(cat => (
           <option key={cat} value={cat}>{cat}</option>
         ))}
       </select>
+
       <div className="grid">
         {techResults.map((item, i) => (
           <div key={i} className="card">
+            {item[10] && (
+              <img
+                src={item[10]}
+                alt={item[1]}
+                style={{ width: '100%', maxHeight: '200px', objectFit: 'cover' }}
+              />
+            )}
             <h4>{item[1]}</h4>
             <p>{item[2]}</p>
             <a href={item[3]} target="_blank" rel="noreferrer">🔗 View Patent</a>

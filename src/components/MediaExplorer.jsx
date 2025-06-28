@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/pagination';
-import { Grid, Pagination } from 'swiper/modules';
+import { Grid, Pagination, Autoplay} from 'swiper/modules';
 
 const placeholderExamples = [
   'MOON LANDING',
@@ -66,13 +66,13 @@ const MediaExplorer = () => {
     <div className="media-library-wrap">
       <div className='search-bar-wrapper'>
         <p className="seach-media-head head-1">Search NASA <span className='gradient-text'>Media Library</span></p>
-      <input
-        type="text"
-        value={mediaQuery}
-        onChange={(e) => setMediaQuery(e.target.value)}
-        placeholder={placeholderText}
-        className="nasa-search-bar"
-      />
+        <input
+          type="text"
+          value={mediaQuery}
+          onChange={(e) => setMediaQuery(e.target.value)}
+          placeholder={placeholderText}
+          className="nasa-search-bar"
+        />
       </div>
       {loading && <p className="loading-text">Loading...</p>}
       {/* <img src="icons/solar-system-svgrepo-com.svg" alt="" /> */}
@@ -81,7 +81,11 @@ const MediaExplorer = () => {
         grid={{ rows: 2, fill: 'row', }}
         spaceBetween={30}
         pagination={{ clickable: true }}
-        modules={[Grid, Pagination]}
+        modules={[Grid, Pagination, Autoplay]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         breakpoints={{
           320: { slidesPerView: 1, grid: { rows: 1 } },
           768: { slidesPerView: 2, grid: { rows: 2 } },

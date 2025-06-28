@@ -17,8 +17,9 @@ const SpaceWeatherAlerts = () => {
   return (
     <div className='space-weather'>
       <div className='flex-row'>
+        <img src="satellite.gif" alt="" />
         <p style={{fontSize:'1.9rem'}}>Space Weather <span className='orange'>Alerts</span></p>
-        <img className='radar-icon' src="icons/space-satellite-dish-svgrepo-com.svg" alt="" />
+          {/* <img className='radar-icon' src="icons/space-satellite-dish-svgrepo-com.svg" alt="" /> */}
       </div>
       <div className='alter-list-wrapper'>
         {alerts.slice(0, 10).map(alert => {

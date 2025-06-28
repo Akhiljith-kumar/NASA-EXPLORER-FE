@@ -266,9 +266,9 @@
   height: 100%; /* optional to stretch cards equally */
 }
 
-.media-card:hover {
+/* .media-card:hover {
   transform: scale(1.03);
-}
+} */
 
 .media-thumb {
   width: 100%;

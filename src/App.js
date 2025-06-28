@@ -14,7 +14,7 @@ function App() {
           <SpaceWeatherAlerts />
         </div>
         <MediaExplorer />
-        {/* <TechTransferExplorer /> */}
+        <TechTransferExplorer />
     </div>
   );
 }
