@@ -206,7 +206,7 @@
 }
 
 .view-altert-btn:hover {
-    color: #ffefef;
+    color: #EF9A0D;
 }
 
 .nasa-search-bar {
@@ -319,4 +319,22 @@
   text-align: center;
   font-weight: bold;
   padding: 20px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #EC6852;
+    font-weight: 900;
+    font-size: 2rem;
+    height: 45px;
+    width: 45px;
+    background: #171c2e78;
+    border-radius: 35px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 28px; 
+  font-weight: bold;
+  color: #EC6852;
 }
