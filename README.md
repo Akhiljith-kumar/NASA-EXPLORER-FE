@@ -51,6 +51,8 @@ As someone passionate about user interface and experience design, I’ve:
 - **Utility Functions**: Placed in `utils/dateUtils.js` for formatting and common logic.
 
 ---
+![image](https://github.com/user-attachments/assets/deec7d14-e9aa-459b-a827-f752c76b308e)
+![image](https://github.com/user-attachments/assets/981eb03f-5960-442d-9bd6-55fb22f75ed8)
 
 ## Setup
 
