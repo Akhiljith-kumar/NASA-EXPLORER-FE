@@ -105,8 +105,8 @@ const MediaExplorer = () => {
               />
               <p className="media-title orange">{item.data[0].title}</p>
               <p className="media-subtitle">{item.data[0].nasa_id}</p>
-              <p className="media-desc font-popins">{item.data[0].description}</p>
-              {item.data[0].description.length > 150  &&
+              <p className="media-desc font-popins">{item.data[0]?.description || 'No description available.'}</p>
+              {item.data?.[0]?.description && item.data[0].description.length > 150 &&
                 <a
                 className='regular-btn no-select'
                 style={{marginTop:'15px', width:'123px'}}

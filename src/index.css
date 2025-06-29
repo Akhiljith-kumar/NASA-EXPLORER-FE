@@ -15,6 +15,11 @@ code {
     monospace;
 }
 
+::selection {
+  color: #ffffff;
+  background: #EC6852;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   border-radius: 50px;
@@ -40,6 +45,10 @@ code {
 
 .yellow {
   color: #FED766;
+}
+
+.main-head {
+    font-size: 3rem;
 }
 
 .head-1 {
@@ -79,4 +88,18 @@ code {
 
 .font-popins {
   font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .main-head {
+        font-size: 50px;
+    }
+
+    .head-1 {
+        font-size: 50px;
+    }
+
+    .head-2 {
+        font-size: 30px;
+    }
 }
