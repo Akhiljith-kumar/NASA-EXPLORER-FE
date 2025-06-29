@@ -35,3 +35,38 @@
   margin-top: 20px;
   width: 95%;
 }
+
+@media (max-width: 768px) {
+ .App {
+  width: 95%;
+ }
+ .sec-1 {
+  width: unset;
+  flex-direction: column;
+ }
+ .astro-container {
+  flex-direction: column;
+ }
+ .space-weather {
+  width: unset;
+ }
+ .astro-img-container {
+    width: 90%;
+    height: auto;
+    margin: auto;
+  }
+  .apod-content {
+    margin: 20px auto;
+    width: 95%;
+  }
+  #pop-up {
+    width: 95%;
+  }
+  .search-bar-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-head-wrapper {
+        margin-top: 20px;
+  }
+}
