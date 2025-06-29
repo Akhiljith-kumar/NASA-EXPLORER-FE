@@ -14,7 +14,7 @@ const Popup = ({ heading, description, onClose, isVisible }) => {
   return (
     <div id="pop-up" className={`${visible ? 'active' : ''} blue-grey-bg`}>
       <h2 className='font-popins' style={{ fontWeight: '400' }}>{heading}</h2>
-      <p className='font-popins' style={{ margin: '25px 0px' }}>{description}</p>
+      <p className='font-popins' style={{ margin: '25px 0px', maxHeight:'600px', overflowY:'auto', marginRight:'20px'}}>{description}</p>
       <a className="regular-btn" onClick={onClose}>Close</a>
     </div>
   );

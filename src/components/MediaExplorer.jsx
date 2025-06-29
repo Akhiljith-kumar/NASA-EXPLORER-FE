@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { searchMedia } from '../api/nasaApi';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Popup from './popup';
 import 'swiper/css';
 import 'swiper/css/grid';
-import { Grid, Autoplay} from 'swiper/modules';
+import { Grid, Autoplay } from 'swiper/modules';
 import { Navigation } from 'swiper/modules';
 
 const placeholderExamples = [
@@ -22,6 +23,11 @@ const MediaExplorer = () => {
   const [charIndex, setCharIndex] = useState(0);
   const [typingForward, setTypingForward] = useState(true);
   const [loading, setLoading] = useState(false);
+
+  const [showPopup, setShowPopup] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState(null);
+
 
   // Typing effect
   useEffect(() => {
@@ -81,11 +87,7 @@ const MediaExplorer = () => {
         slidesPerView={3}
         grid={{ rows: 2, fill: 'row', }}
         spaceBetween={30}
-        modules={[Grid, Autoplay, Navigation]}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
+        modules={[Grid, Navigation]}
         breakpoints={{
           320: { slidesPerView: 1, grid: { rows: 1 } },
           768: { slidesPerView: 2, grid: { rows: 2 } },
@@ -104,10 +106,38 @@ const MediaExplorer = () => {
               <p className="media-title orange">{item.data[0].title}</p>
               <p className="media-subtitle">{item.data[0].nasa_id}</p>
               <p className="media-desc font-popins">{item.data[0].description}</p>
+              {item.data[0].description.length > 150  &&
+                <a
+                className='regular-btn no-select'
+                style={{marginTop:'15px', width:'123px'}}
+                onClick={() => {
+                  setActiveItem(item);
+                  setShowPopup(true);
+                  setTimeout(() => setIsPopupOpen(true), 10);
+                }}
+              >
+                Read more
+              </a>
+              }
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
+      {showPopup && activeItem && (
+        <Popup
+          heading={activeItem.data[0].title}
+          description={activeItem.data[0].description}
+          imageSrc={activeItem.links?.[0]?.href}
+          isVisible={isPopupOpen}
+          onClose={() => {
+            setIsPopupOpen(false);
+            setTimeout(() => {
+              setShowPopup(false);
+              setActiveItem(null);
+            }, 400);
+          }}
+        />
+      )}
     </div>
   );
 };
