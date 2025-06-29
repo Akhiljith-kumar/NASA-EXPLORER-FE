@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const Popup = ({ heading, description, imageSrc, onClose, isVisible }) => {
+const Popup = ({ heading, description, onClose, isVisible }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {

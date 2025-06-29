@@ -3,6 +3,7 @@ import SpaceWeatherAlerts from './components/SpaceWeatherAlerts';
 import MediaExplorer from './components/MediaExplorer';
 import TechTransferExplorer from './components/TechTransferExplorer';
 import Header from './components/Header';
+import NeoAsteroidChart from './components/NeoAsteroidChart';
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <SpaceWeatherAlerts />
         </div>
         <MediaExplorer />
+        <NeoAsteroidChart />
         <TechTransferExplorer />
     </div>
   );

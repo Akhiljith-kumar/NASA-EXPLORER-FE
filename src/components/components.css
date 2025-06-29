@@ -242,10 +242,6 @@
     margin-bottom: 20px;
 }
 
-/* Remove grid styling if not used */
-.media-grid {
-  /* This can be deleted unless reused elsewhere */
-}
 
 /* Swiper wrapper spacing */
 .mySwiper {
@@ -253,22 +249,16 @@
   width: 100%;
 }
 
-/* Media card styling (already great) */
 .media-card {
   background-color: #1f2a38;
   color: #e0e6ed;
   padding: 1.2rem;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: 100%; /* optional to stretch cards equally */
+  height: 100%;
 }
-
-/* .media-card:hover {
-  transform: scale(1.03);
-} */
 
 .media-thumb {
   width: 100%;
@@ -282,6 +272,11 @@
 .media-title {
   font-size: 1.1rem;
   margin-bottom: 0.3rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;    
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .media-subtitle {
@@ -296,6 +291,7 @@
   color: #d6dce5;
   display: -webkit-box;
   -webkit-line-clamp: 3;    
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -337,4 +333,16 @@
   font-size: 28px; 
   font-weight: bold;
   color: #EC6852;
+}
+
+.near-earth-object-wrapper {
+  width: 95%;
+  margin: auto;
+}
+
+.near-earth-object-barchart {
+  margin-top: 20px;
+}
+.nasa-date-picker {
+  max-width: 200px;
 }

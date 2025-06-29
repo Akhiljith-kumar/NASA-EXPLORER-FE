@@ -3,8 +3,8 @@ import { searchMedia } from '../api/nasaApi';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/grid';
-import 'swiper/css/pagination';
-import { Grid, Pagination, Autoplay} from 'swiper/modules';
+import { Grid, Autoplay} from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 const placeholderExamples = [
   'MOON LANDING',
@@ -77,13 +77,13 @@ const MediaExplorer = () => {
       {loading && <p className="loading-text">Loading...</p>}
       {/* <img src="icons/solar-system-svgrepo-com.svg" alt="" /> */}
       <Swiper
+        navigation={true}
         slidesPerView={3}
         grid={{ rows: 2, fill: 'row', }}
         spaceBetween={30}
-        pagination={{ clickable: true }}
-        modules={[Grid, Pagination, Autoplay]}
+        modules={[Grid, Autoplay, Navigation]}
         autoplay={{
-          delay: 3000,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         breakpoints={{
