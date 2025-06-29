@@ -1,6 +1,12 @@
 # NASA Explorer – Front end
 
 This is the frontend React application built to explore NASA data. The app features various sections including Media Library Search, Tech Transfer Patents, Neo Asteroids Chart, APOD (Astronomy Picture of the Day), and Space Weather Alerts.
+
+Live Application:  
+https://nasa-explorer-fe-8pvo.onrender.com/
+⚠️ Please note: The backend is hosted on Render (free tier), so if inactive for a while, it may take a few seconds to wake up. A quick page refresh may be needed on first load.
+
+
   
 File structure 
 ```bash
