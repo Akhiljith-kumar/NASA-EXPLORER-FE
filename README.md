@@ -38,6 +38,7 @@ src/
 As someone passionate about user interface and experience design, I’ve:
 
 - Ensured **color consistency and theme control** through `index.css`, allowing you to change the entire app's theme by editing this one file.
+- Responsive components to ensure a smooth experience in mobile screens
 - Used **optimized GIFs/images**
 - Maintained a **professional and elegant look** using a harmonious color palette and clean layout.
 
