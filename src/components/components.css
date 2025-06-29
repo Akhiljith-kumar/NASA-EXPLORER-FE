@@ -335,8 +335,12 @@
 }
 
 .near-earth-object-barchart {
-  margin-top: 20px;
+  margin-top: 40px;
+  max-width: 1500px;
 }
 .nasa-date-picker {
   max-width: 200px;
+}
+.swiper-slide {
+  max-width: 700px;
 }
