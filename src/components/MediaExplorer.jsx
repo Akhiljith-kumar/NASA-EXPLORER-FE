@@ -81,7 +81,6 @@ const MediaExplorer = () => {
         />
       </div>
       {loading && <p className="loading-text">Loading...</p>}
-      {/* <img src="icons/solar-system-svgrepo-com.svg" alt="" /> */}
       <Swiper
         navigation={true}
         slidesPerView={3}
